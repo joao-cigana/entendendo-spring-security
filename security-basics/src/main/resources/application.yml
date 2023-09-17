@@ -1,0 +1,9 @@
+server:
+  port: '8787'
+  error:
+    include-stacktrace: never
+spring:
+  profiles:
+    active:
+      - dev
+
