@@ -1,6 +1,9 @@
 package dev.cigana.securitybasics.controller;
 
+import dev.cigana.securitybasics.domain.usuario.JWTDTO;
+import dev.cigana.securitybasics.domain.usuario.Usuario;
 import dev.cigana.securitybasics.domain.usuario.UsuarioDTO;
+import dev.cigana.securitybasics.services.JWTService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,11 +21,14 @@ public class AuthenticationController {
     @Autowired
     private AuthenticationManager manager;
 
+    @Autowired
+    private JWTService jwtService;
+
     @PostMapping
-    public ResponseEntity<Void> efetuarLogin(@RequestBody @Valid UsuarioDTO dto){
+    public ResponseEntity<JWTDTO> efetuarLogin(@RequestBody @Valid UsuarioDTO dto){
         var token = new UsernamePasswordAuthenticationToken(dto.username(), dto.password());
         var authentication = manager.authenticate(token);
-
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok(new JWTDTO(jwtService.generateToken((Usuario) authentication.getPrincipal())));
     }
+
 }
