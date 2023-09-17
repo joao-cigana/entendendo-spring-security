@@ -1,8 +1,8 @@
 package dev.cigana.securitybasics.controller;
 
-import dev.cigana.securitybasics.domain.CarroFormDTO;
-import dev.cigana.securitybasics.domain.CarroResponseDTO;
-import dev.cigana.securitybasics.services.CarroService;
+import dev.cigana.securitybasics.domain.carro.CarroFormDTO;
+import dev.cigana.securitybasics.domain.carro.CarroResponseDTO;
+import dev.cigana.securitybasics.services.interfaces.CarroService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

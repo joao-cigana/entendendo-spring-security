@@ -1,16 +1,16 @@
-package dev.cigana.securitybasics.services;
+package dev.cigana.securitybasics.services.impl;
 
-import dev.cigana.securitybasics.domain.Carro;
-import dev.cigana.securitybasics.domain.CarroFormDTO;
-import dev.cigana.securitybasics.domain.CarroResponseDTO;
+import dev.cigana.securitybasics.domain.carro.CarroFormDTO;
+import dev.cigana.securitybasics.domain.carro.CarroResponseDTO;
 import dev.cigana.securitybasics.repositories.CarroRepository;
+import dev.cigana.securitybasics.services.interfaces.CarroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CarroServiceIMPL implements CarroService{
+public class CarroServiceIMPL implements CarroService {
 
     @Autowired
     private CarroRepository carroRepository;

@@ -1,6 +1,4 @@
-package dev.cigana.securitybasics.domain;
-
-import lombok.Getter;
+package dev.cigana.securitybasics.domain.carro;
 
 public record CarroResponseDTO(
 

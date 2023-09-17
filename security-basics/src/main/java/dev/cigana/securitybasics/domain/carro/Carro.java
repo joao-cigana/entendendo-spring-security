@@ -1,4 +1,4 @@
-package dev.cigana.securitybasics.domain;
+package dev.cigana.securitybasics.domain.carro;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

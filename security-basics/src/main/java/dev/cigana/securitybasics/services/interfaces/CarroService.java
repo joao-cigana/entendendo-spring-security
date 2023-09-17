@@ -1,7 +1,7 @@
-package dev.cigana.securitybasics.services;
+package dev.cigana.securitybasics.services.interfaces;
 
-import dev.cigana.securitybasics.domain.CarroFormDTO;
-import dev.cigana.securitybasics.domain.CarroResponseDTO;
+import dev.cigana.securitybasics.domain.carro.CarroFormDTO;
+import dev.cigana.securitybasics.domain.carro.CarroResponseDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
